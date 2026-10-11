@@ -14,7 +14,7 @@ def verify_customers(age, photos, has_filters):
 @app.route('/')
 def home(): return render_template('index.html')
 
-@app.route('/verify', methods = ['POST'])
+@app.route('/verify', methods = ['GET', 'POST'])
 def verify():
     global balance
     data = request.json 
